@@ -1,33 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Active Learning Activity</title>
+
+    <!-- Link to Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f5;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #28282d, #2a2b2c);
             color: #333;
-            text-align: center;
             margin: 0;
             padding: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         h1 {
+            font-family: 'Roboto', sans-serif;
             color: #0033cc;
-            font-size: 2.5em;
-            margin-top: 20px;
-            padding: 10px;
-            display: inline-block;
-            background-color: #cce7ff;
+            font-size: 3em;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #bdd2e7;
             border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        h1 mark {
+            background-color: rgb(215, 168, 247);
+            padding: 0 5px;
+            border-radius: 3px;
+        }
+
+        /* Table Styles */
         table {
-            margin: 40px auto;
-            width: 50%;
-            border-collapse: collapse;
-            border: 3px solid #0033cc; /* Border around the entire table */
-            background-color: #e6f2ff;
+            margin-top: 40px;
+            width: 80%;
+            max-width: 1000px;
+            border-collapse: separate;
+            border-spacing: 0;
         }
 
         tr {
@@ -35,37 +55,67 @@
         }
 
         td {
-            padding: 15px;
-            border: 2px solid #0073e6; /* Border around each cell */
+            padding: 20px;
+            border: 2px solid #0033cc;
             background-color: #cce7ff;
-            border-radius: 6px;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         td a {
             text-decoration: none;
             color: #003366;
-            font-weight: bold;
+            font-weight: 500;
             font-size: 1.2em;
             display: block;
+            padding: 10px;
+            transition: color 0.3s ease;
         }
 
         td:hover {
-            background-color: #b3d1ff; /* Highlight cell on hover */
+            background-color: #b3d1ff;
+            transform: scale(1.05);
         }
 
         td a:hover {
-            color: #ffd700;
+            color: #f3104d;
+            font-weight: 600;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+                margin: 10px 0;
+            }
+
+            table {
+                width: 90%;
+            }
+
+            td {
+                font-size: 1em;
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1><mark>Active Learning Activity 1</mark></h1>
-    <table>
-        <tr>
-            <td><a href="Task_1.html">TASK 1</a></td>
-            <td><a href="Task_2.html">TASK 2</a></td>
-            <td><a href="Task_3.html">TASK 3</a></td>
-        </tr>
-    </table>
+
+    <div>
+        <h1><mark>Active Learning Activity 1</mark></h1>
+
+        <!-- Table with Task Links -->
+        <table>
+            <tr>
+                <td><a href="Task_1.html">TASK 1</a></td>
+                <td><a href="Task_2.html">TASK 2</a></td>
+                <td><a href="Task_3.html">TASK 3</a></td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
+
