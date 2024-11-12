@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS example with various features">
+    <title>CSS Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        .banner {
+            background: url('https://via.placeholder.com/1200x300') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        h1, h2 {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .box-model-example {
+            width: 300px;
+            padding: 20px;
+            margin: 10px;
+            border: 5px solid #333;
+            background-color: #f0f0f0;
+        }
+        ul.styled-list {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        ul.styled-list li {
+            margin-bottom: 10px;
+        }
+        .position-example {
+            position: relative;
+            background-color: #e0e0e0;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .position-example .absolute-box {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff6347;
+            padding: 10px;
+            color: white;
+        }
+        .color-box {
+            background-color: lightblue;
+            color: darkblue;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .border-box {
+            border: 2px solid #444;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .marginpadding-example {
+            margin: 20px;
+            padding: 15px;
+            background-color: #ddd;
+        }
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff7f50;
+            animation: slide 2s infinite;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100px); }
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        img {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+        }
+        .variable-example {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px;
+        }
+        .variable-example-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .flex-item {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+        .gradient-background {
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS Example</h1>
+            <p>This page demonstrates various CSS features.</p>
+        </header>
+        <div class="banner">
+            <h2>Welcome to CSS Styling</h2>
+        </div>
+        <section class="box-model-example">
+            <h2>The Box Model</h2>
+            <p>This box has padding, margins, and borders applied.</p>
+        </section>
+        <section>
+            <h2>Styled List</h2>
+            <ul class="styled-list">
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ul>
+        </section>
+        <section class="position-example">
+            <h2>CSS Positioning</h2>
+            <div class="absolute-box">I'm positioned absolutely!</div>
+            <p>This box contains an absolutely positioned element inside it.</p>
+        </section>
+        <section class="border-box">
+            <h2>Borders and Boxes</h2>
+            <div class="color-box">This is a colored box with custom borders.</div>
+        </section>
+        <section>
+            <h2>CSS3 Animations</h2>
+            <div class="animated-box"></div>
+        </section>
+        <section>
+            <h2>CSS Tooltips</h2>
+            <div class="tooltip">Hover over me
+                <span class="tooltip-text">This is a tooltip!</span>
+            </div>
+        </section>
+        <section>
+            <h2>Styled Image</h2>
+            <img src="https://via.placeholder.com/400" alt="Placeholder image">
+        </section>
+        <section>
+            <h2>CSS Variables</h2>
+            <div class="variable-example">This box uses a CSS variable for the background color.</div>
+            <div class="variable-example-secondary">This one uses another variable for the background.</div>
+        </section>
+        <section>
+            <h2>Flexbox</h2>
+            <div class="flex-container">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+        </section>
+        <section>
+            <h2>Responsive Layout with Media Queries</h2>
+            <p>Resize the browser window to see the layout change.</p>
+        </section>
+        <section class="gradient-background">
+            <h2>Working with Gradients</h2>
+            <p>This section has a gradient background.</p>
+        </section>
+    </div>
+</body>
+</html>
